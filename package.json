@@ -1,0 +1,26 @@
+{
+  "name": "get-scraping",
+  "version": "1.0.0",
+  "description": "Whenever a user visits the site, the app should scrape stories from a news outlet of your choice and display them for the user.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lilliejack05/Get-Scraping.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lilliejack05/Get-Scraping/issues"
+  },
+  "homepage": "https://github.com/lilliejack05/Get-Scraping#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mongoose": "^5.6.11"
+  }
+}

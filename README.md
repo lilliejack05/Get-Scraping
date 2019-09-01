@@ -1,4 +1,4 @@
-# GettoScraping
+# Get-Scraping
 
 Whenever a user visits the site, the app should scrape stories from a news outlet of your choice and display them for the user. 
 

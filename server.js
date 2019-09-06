@@ -23,11 +23,12 @@ app.use(express.static("public"));
 mongoose.Promise = Promise;
 
  // Mongoose (orm) connects to our mongo db and allows us to have access to the MongoDB commands for easy CRUD 
-// If deployed, use the deployed database. 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsscraper";
+// deployed, use the deployed database. 
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
-// Set mongoose to leverage built in JavaScript ES6 Promises
-// Connect to the Mongo DB
+mongoose.connect(MONGODB_URI);
+
+// connect to the Mongo DB
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, {
   useMongoClient: true

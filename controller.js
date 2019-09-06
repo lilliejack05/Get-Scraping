@@ -134,7 +134,7 @@ router.get("/notes/:id", function(req, res) {
   });
 });
 
-// This will grab an article by it's ObjectId
+// grab an article by it's ObjectId
 router.get("/articles/:id", function(req, res) {
 
   console.log("ID is getting read" + req.params.id);
@@ -158,7 +158,7 @@ router.get("/articles/:id", function(req, res) {
 //  new comment or replace an existing note
 router.post("/articles/:id", function(req, res) {
 
-  // Create a new note and pass the req.body to the entry
+  // new comment and pass the req.body to the entry
   var newComment = new Note(req.body);
   // And save the new note the db
   newComment.save(function(error, doc) {
@@ -167,7 +167,7 @@ router.post("/articles/:id", function(req, res) {
       console.log(error);
     } 
     else {
-      // Use the article id to find it and then push note
+      // article id to find it and then push note
       Article.findOneAndUpdate({ "_id": req.params.id }, {$push: {notes: doc._id}}, {new: true, upsert: true})
 
       .populate('notes')
@@ -183,5 +183,5 @@ router.post("/articles/:id", function(req, res) {
     }
   });
 });
-// Export routes for server.js to use.
+//  routes for server.js to 
 module.exports = router;

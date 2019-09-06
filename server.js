@@ -23,7 +23,7 @@ app.use(express.static("public"));
 mongoose.Promise = Promise;
 
  // Mongoose (orm) connects to our mongo db and allows us to have access to the MongoDB commands for easy CRUD 
-// If deployed, use the deployed database. Otherwise use the local newsscraper database
+// If deployed, use the deployed database. 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsscraper";
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
@@ -39,7 +39,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //Parse application/json
 app.use(bodyParser.json());
 
-//Set Handlebars.
+// handlebars.
 var exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
@@ -48,7 +48,7 @@ app.set("view engine", "handlebars")
 // Import routes and give the server access to them.
 require("./controllers/fetch.js")(app);
 require("./controllers/headline.js")(app);
-require("./controllers/note.js")(app);
+require("./controllers/comment.js")(app);
 
 //listen on port 3000
 app.listen(PORT, function() {

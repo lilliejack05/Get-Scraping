@@ -1,0 +1,53 @@
+body{
+    background: url('../images/nbc_horizontal_logo.png');
+    background-repeat: no-repeat;
+    background-size: 800px;
+    font-family: 'Oswald', sans-serif;
+    justify-content: center;
+    font-size: 16px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  main{
+    flex: 1 0 auto;
+  }
+  
+  #articles {
+    display: inline-block;
+    overflow: auto;
+    width: 60%;
+    height: 700px;
+  }
+  #notes {
+    float: right;
+    width: 30%;
+  }
+  textarea, input {
+    display: block;
+    width: 100%;
+    background-color: #FCF5C7;
+  }
+  
+  a, a:hover {
+    text-decoration: none;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.error-title {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+}
+
+.error-message {
+    margin-top: 3rem;
+    font-size: 2rem;
+}
